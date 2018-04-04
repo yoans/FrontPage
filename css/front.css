@@ -24,6 +24,36 @@ body {
     border: 5px solid white;
     margin-bottom: 40px;
 }
+
+input {
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    padding: 5px 20px 5px 15px;
+    margin: 5px 5px;
+    width: 100px;
+    text-align: center;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid
+}
+button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    margin: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 2px;
+    width: 110px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid
+}
 h1 {
     color: white;
     font-weight: bold;
@@ -74,6 +104,11 @@ a {
     display: none;
 }
 
+#image-credit {
+    border-style:none;
+    text-align: center;
+    width: 100%;
+}
 @media (max-width: 450px) {
 ul {
     text-align: center;
@@ -120,10 +155,84 @@ a:hover {
 .content {
     padding-top: 60px;
 }
-#image-credit {
-    padding-top: 100px;
-    padding-bottom: 40px;
-    text-align: center;
-    width: 100%;
 }
+table {
+    padding-top: 20px;
+}
+
+p{
+    margin-top: 1em;
+    text-align: left;
+    color: #aaa;
+}
+td{
+    margin: 0;
+    width: 10px;
+    height: 10px;
+}
+
+@keyframes go-up {
+    0%   {left:0px; top:13px;}
+    100% {left:0px; top:0px;}
+}
+@keyframes go-right {
+    0%   {left:-13px; top:0px;}
+    100% {left:0px; top:0px;}
+}
+@keyframes go-down {
+    0%   {left:0px; top:-13px;}
+    100% {left:0px; top:0px;}
+}
+@keyframes go-left {
+    0%   {left:13px; top:0px;}
+    100% {left:0px; top:0px;}
+}
+.space {
+    width: 10px;
+    height: 10px;
+    position: relative;
+}
+.arrow-up {
+    animation-name: go-up;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    position: absolute;
+    z-index: 0;
+    border-top: solid 5px transparent;
+    border-left: solid 5px transparent;
+    border-right: solid 5px transparent;
+    border-bottom: solid 5px white;
+}
+.arrow-down {
+    animation-name: go-down;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    position: absolute;
+    z-index: 2;
+    border-left: solid 5px transparent;
+    border-bottom: solid 5px transparent;
+    border-right: solid 5px transparent;
+    border-top: solid 5px white;
+}
+.arrow-right {
+    animation-name: go-right;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    position: absolute;
+    z-index: 2;
+    border-top: solid 5px transparent;
+    border-bottom: solid 5px transparent;
+    border-right: solid 5px transparent;
+    border-left: solid 5px white;
+}
+.arrow-left {
+    animation-name: go-left;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    position: absolute;
+    z-index: 3;
+    border-top: solid 5px transparent;
+    border-left: solid 5px transparent;
+    border-bottom: solid 5px transparent;
+    border-right: solid 5px white;
 }
